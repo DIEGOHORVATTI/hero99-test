@@ -42,18 +42,18 @@ print(listPlatesWithFeatures())
 def listModelColorPlatesSpecial():
     # Função para verificar se a soma dos algarismos da placa é par
     def sumDigitsPlateEven(plate):
-        # Estraí os números da placa
+        # Extrai os números da placa
         numbersPlate = [int(d) for d in plate if d.isdigit()]
-        
-        # checa se a soma dos números é par
+
+        # Checa se a soma dos números é par
         return sum(numbersPlate) % 2 == 0
 
     # Filtre os veículos que atendem às condições especificadas
     specialVehicles = []
-    for vehicle in vehicles:
+    for vehicle in veiculos:  
         # Confira se a segunda letra da placa é uma vogal
-        if vehicle.plate[1] in charactersSpecial and sumDigitsPlateEven(vehicle.plate):
-            specialVehicles.append({'model': vehicle.model, 'color': vehicle.color})
+        if vehicle.placa[1] in charactersSpecial and sumDigitsPlateEven(vehicle.placa):
+            specialVehicles.append({'modelo': vehicle.modelo, 'cor': vehicle.cor})  # Corrected 'model' to 'modelo'
 
     return specialVehicles
 

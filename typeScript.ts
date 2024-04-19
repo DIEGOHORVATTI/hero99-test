@@ -167,7 +167,7 @@ function changeOwnerByChassis(chassi: string, newOwner: string): void {
   if (veiculo) {
     veiculo.proprietario = newOwner;
     console.log(
-      `\nProprietário do veículo com chassi ${chassi} alterado para ${novoProprietario}`
+      `\nProprietário do veículo com chassi ${chassi} alterado para ${newOwner}.`
     );
   }
 
